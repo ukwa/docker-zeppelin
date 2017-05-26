@@ -2,5 +2,5 @@
 
 set -x
 
-/opt/zeppelin-0.7.0-bin-all/bin/zeppelin-daemon.sh start
-tail -f /opt/zeppelin-0.7.0-bin-all/logs/zeppelin--*log
+${ZEPPELIN_HOME}/bin/zeppelin-daemon.sh start
+tail -f ${ZEPPELIN_HOME}/logs/zeppelin--*log
