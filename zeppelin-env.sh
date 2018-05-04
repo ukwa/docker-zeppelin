@@ -19,6 +19,9 @@
 # export JAVA_HOME=
 # export MASTER=                 		# Spark master url. eg. spark://master_addr:7077. Leave empty if you want to use local mode.
 # export ZEPPELIN_JAVA_OPTS      		# Additional jvm options. for example, export ZEPPELIN_JAVA_OPTS="-Dspark.executor.memory=8g -Dspark.cores.max=16"
+
+export ZEPPELIN_JAVA_OPTS="-Dspark.executor.memory=4g -Dspark.cores.max=32 -Dspark.jars=/warcbase-core/target/warcbase-core-0.1.0-SNAPSHOT-fatjar.jar"
+
 # export ZEPPELIN_MEM            		# Zeppelin jvm mem options Default -Xms1024m -Xmx1024m -XX:MaxPermSize=512m
 # export ZEPPELIN_INTP_MEM       		# zeppelin interpreter process jvm mem options. Default -Xms1024m -Xmx1024m -XX:MaxPermSize=512m
 # export ZEPPELIN_INTP_JAVA_OPTS 		# zeppelin interpreter process jvm options.
@@ -52,8 +55,6 @@
 # export SPARK_HOME                             # (required) When it is defined, load it instead of Zeppelin embedded Spark libraries
 # export SPARK_SUBMIT_OPTIONS                   # (optional) extra options to pass to spark submit. eg) "--driver-memory 512M --executor-memory 1G".
 # export SPARK_APP_NAME                         # (optional) The name of spark application.
-
-export SPARK_SUBMIT_OPTIONS="--jars /warcbase-core/target/warcbase-core-0.1.0-SNAPSHOT-fatjar.jar"
 
 ## Use embedded spark binaries ##
 ## without SPARK_HOME defined, Zeppelin still able to run spark interpreter process using embedded spark binaries.
